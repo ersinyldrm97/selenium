@@ -1,0 +1,7 @@
+{
+  "url": {
+    "apple": "http://www.apple.com",
+    "etsy": "http://www.etsy.com",
+    "login": "https://the-internet.herokuapp.com/login"
+  }
+}
