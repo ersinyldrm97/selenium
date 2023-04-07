@@ -1,9 +1,13 @@
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+
+chrome_options = Options()
+chrome_options.add_experimental_option("detach", True)
 
 service = Service("./chromedriver.exe")
-driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome(service=service, chrome_options=chrome_options)
 
 def visit_apple_homepage():
   url = "http://www.apple.com"

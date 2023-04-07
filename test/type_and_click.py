@@ -2,10 +2,13 @@ from selenium.webdriver import Keys
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 
+chrome_options = Options()
+chrome_options.add_experimental_option("detach", True)
 
 service = Service("./chromedriver.exe")
-driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome(service=service, chrome_options=chrome_options)
 
 def type_text():
   url = "http://www.google.com/"
