@@ -28,6 +28,7 @@ def login():
       message_for_username = driver.find_element(By.ID, 'flash').text
       message_for_password = driver.find_element(By.ID, 'flash').text
       
+#       
       if "You logged into a secure area!" in message_for_login:
         print('OK, You logged in')
         driver.save_screenshot('./screenshots/logged_in.png')
